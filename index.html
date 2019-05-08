@@ -2,11 +2,12 @@
 <head>
  <title>Rotel</title>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="manifest" href="manifest.json">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script> 
- <script src="rotelConfig.js"></script> 
- <script src="rotelClient.js"></script> 
+ <script src="rotelConfig.js"></script>
+ <script src="rotelClient.js"></script>
  <script src="reconnectingWebsocket.js"></script> 
 
 <style>
@@ -22,7 +23,7 @@ input, label {
 .flipswitchcolumn
 {
     display: table-cell;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 .controlcontainer
 {
@@ -60,7 +61,7 @@ input, label {
 </div>
 
 <div class="flipswitchcolumn">
-<label for="tone-flipswitch">Tone:</label>
+<label for="tone-flipswitch">Tone Bypass:</label>
 <select id="tone-flipswitch" data-role="flipswitch">
 <option value="off">Off</option>
 <option value="on">On</option>
@@ -85,6 +86,9 @@ input, label {
 
 <label for="source" class="select">Source:</label>
 <select name="source" id="source">
+<option id="bluetooth" value="bluetooth">BLUETOOTH</option>
+<option id="usb" value="usb">USB</option>
+<option id="pcusb" value="pcusb">PCUSB</option>
 <option id="aux1" value="aux1">AUX1</option>
 <option id="aux2" value="aux2">AUX2</option>
 <option id="coax1" value="coax1">COAX1</option>
@@ -94,7 +98,6 @@ input, label {
 <option id="tuner" value="tuner">TUNER</option>
 <option id="phono" value="phono">PHONO</option>
 <option id="cd" value="cd">CD</option>
-<option id="usb" value="usb">USB</option>
 </select></label> 
 
 

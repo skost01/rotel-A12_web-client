@@ -1,15 +1,19 @@
+// Original RotelClient for Rotel RA-12 amplifier by Claes Holmerson
+
 var RotelConfig = {
-	websocketUrl : 'ws://192.168.88.230:8989/ws',
+	websocketUrl : 'ws://192.168.1.120:8989/ws',
 	serialPortDevice: '/dev/ttyUSB0',
-	aux1: 'External Bluetooth',
+	aux1: null,
 	aux2: null,
 	coax1: null,
-	coax2: 'Volumio',
-	opt1: 'TV',
-	opt2: 'Chromecast',
+	coax2: null,
+	opt1: null,
+	opt2: null,
 	tuner: null,
 	phono: null,
 	cd: null,
-	usb: 'Rotel Bluetooth'
+	usb: 'Front USB',
+	bluetooth: 'Bluetooth',
+	pcusb: 'Volumio'
 };
 
