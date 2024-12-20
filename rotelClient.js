@@ -408,7 +408,7 @@ var RotelClient = function() {
 	this.FeedbackOnEvent = function() { return this.createActionEvent('rs232_update_on!'); }
 
 	this.createActionEvent = function(action) {
-		return 'sendjson {"P":"/dev/ttyUSB0","Data":[{"D":"'+action+'"}]}';
+		return 'sendjson {"P":"'+config.serialPortDevice+'","Data":[{"D":"'+action+'"}]}';
 	};
 
 	// create buffer-variable, which collects all messages from server (A12) until receiving terminating character ('$')
